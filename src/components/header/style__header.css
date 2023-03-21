@@ -1,0 +1,124 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 220px 1fr;
+  width: 100vw;
+  background-color: #d5d1ce;
+  max-height: 72px;
+  height: 7vh;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in;
+}
+
+.header:hover .icon-btn_header {
+  animation: 3s basket linear;
+  animation-fill-mode: forwards;
+
+}
+
+.header:hover {
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease-in;
+}
+
+.header:hover .search {
+  border: 1px solid;
+  border-left: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.header:hover .controls::before {
+  border: 1px solid;
+  border-right: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.nav {
+  max-width: 800px;
+  width: 40vw;
+  padding-left: 30px;
+  font-weight: 400;
+}
+
+.catalogue {}
+
+.menu {}
+
+.menu__catalogue {}
+
+.menu__top {}
+
+.menu__bottom {}
+
+.logo {
+  max-width: 220px;
+  width: 188px;
+  height: 51px;
+  background-image: url(https://static.insales-cdn.com/files/1/3337/22768905/original/newlogo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.controls {
+  display: flex;
+  width: 40vw;
+  height: 30px;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+
+
+.controls input {
+  width: 240px;
+  height: 30px;
+  border: none;
+  background-color: rgb(241 241 241);
+}
+
+.search {
+  display: flex;
+  width: 14vw;
+  height: 100%;
+}
+
+.controls::before {
+  content: "";
+  display: inline;
+  width: 32px;
+  height: 32px;
+  background-image: url(../../img/search.png);
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+  background-color: rgb(241, 241, 241);
+  background-position: 7px;
+}
+
+
+.basket {
+  background-image: url(../../img/basket.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.icon-btn_header {
+  width: 25px;
+  height: 25px;
+  margin: 0 0 0 10px;
+  /* animation: 3s basket linear infinite; */
+  transition: all 0s ease-in 0s;
+}
+
+
+
+button {
+  background-color: transparent;
+  padding-right: 10px;
+}
+
+@keyframes basket {
+  100% {
+    transform: translateX(120px);
+  }
+}
