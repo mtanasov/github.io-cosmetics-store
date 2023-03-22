@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import "./style__header.css"
 
-const Header = () => {
+export default () => {
 
   return (
     <header className='header'>
@@ -20,5 +20,3 @@ const Header = () => {
     </header >
   )
 }
-
-export default Header

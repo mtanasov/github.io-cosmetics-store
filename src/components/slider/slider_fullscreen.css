@@ -1,0 +1,32 @@
+.swiper {}
+
+.swiper-initialized {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.swiper-horizontal {}
+
+.swiper-backface-hidden {}
+
+.swiper-wrapper div {
+  /* background-size: 100% 100%;
+  background-repeat: no-repeat; */
+}
+
+.swiper-slide {}
+
+.swiper-slide div {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-slide-active {
+  height: 100vh;
+  background-color: bisque;
+}
+
+.swiper-slide-next {}

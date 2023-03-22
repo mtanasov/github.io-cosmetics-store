@@ -1,0 +1,38 @@
+.layout__content {
+  background-color: lawngreen;
+  max-width: 1920px;
+  max-height: 700px;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+}
+
+/* НАПИСАТЬ НА GRID */
+
+.banner-list {
+  width: 90%;
+  height: 90%;
+  background-color: antiquewhite;
+}
+
+.banner-list__item {}
+
+.editable-block {}
+
+.no-text {}
+
+.img-ratio {}
+
+.img-ratio_cover {}
+
+.banner-list__item-photo {}
+
+.img-ratio__inner {}
+
+.img-fit {}
+
+.banner-list__item-title {}
+
+.icon {}
+
+.icon-arrow-right {}

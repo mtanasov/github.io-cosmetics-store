@@ -2,22 +2,22 @@
   display: grid;
   grid-template-columns: 1fr 220px 1fr;
   width: 100vw;
-  background-color: #d5d1ce;
+  /* background-color: #d5d1ce; */
   max-height: 72px;
   height: 7vh;
   align-items: center;
   box-sizing: border-box;
-  transition: all 0.5s ease-in;
+  position: fixed;
+  z-index: 99;
 }
 
 .header:hover .icon-btn_header {
-  animation: 3s basket linear;
-  animation-fill-mode: forwards;
-
+  animation: 7s basket ease-in infinite;
+  /* transition: all 0.5s ease-in; */
 }
 
 .header:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255 255 255 / 38%);
   transition: all 0.5s ease-in;
 }
 
@@ -88,7 +88,7 @@
   display: inline;
   width: 32px;
   height: 32px;
-  background-image: url(../../img/search.png);
+  background-image: url(../../assets/img/search.png);
   background-repeat: no-repeat;
   background-size: 60% 60%;
   background-color: rgb(241, 241, 241);
@@ -97,17 +97,16 @@
 
 
 .basket {
-  background-image: url(../../img/basket.png);
+  background-image: url(../../assets/img/basket.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  transition: translateX(0px);
 }
 
 .icon-btn_header {
   width: 25px;
   height: 25px;
   margin: 0 0 0 10px;
-  /* animation: 3s basket linear infinite; */
-  transition: all 0s ease-in 0s;
 }
 
 
@@ -118,7 +117,11 @@ button {
 }
 
 @keyframes basket {
+  50% {
+    transform: rotate(360deg);
+  }
+
   100% {
-    transform: translateX(120px);
+    transform: rotate(0deg);
   }
 }
