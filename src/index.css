@@ -64,3 +64,20 @@ button:focus-visible {
 
   button {}
 }
+
+.banner__sliders__product {
+  display: grid;
+  max-height: 450px;
+  width: 100vw;
+  max-width: 1920px;
+  justify-content: center;
+  /* padding: 20px 0; */
+}
+
+.content {
+  display: flex;
+  max-width: 1920px;
+  width: 90vw;
+  flex-direction: column;
+  /* align-items: center; */
+}

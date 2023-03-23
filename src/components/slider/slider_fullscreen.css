@@ -1,6 +1,6 @@
-.swiper {}
+.content .swiper {}
 
-.swiper-initialized {
+.content .swiper-initialized {
   width: 100vw;
   height: 100vh;
 }
@@ -17,14 +17,14 @@
 
 .swiper-slide {}
 
-.swiper-slide div {
+.content .swiper .swiper-wrapper .swiper-slide div {
   height: 100vh;
   width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.swiper-slide-active {
+.content .swiper .swiper-wrapper .swiper-slide-active {
   height: 100vh;
   background-color: bisque;
 }
