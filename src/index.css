@@ -34,7 +34,7 @@ body {
 
 #root {
   display: flex;
-  width: 1900px;
+  width: 100vw;
   justify-content: center;
 }
 
