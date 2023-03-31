@@ -32,6 +32,12 @@ body {
   overflow-x: hidden;
 }
 
+#root {
+  display: flex;
+  width: 1900px;
+  justify-content: center;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -45,7 +51,8 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {}
+button:hover {
+}
 
 button:focus,
 button:focus-visible {
@@ -62,22 +69,23 @@ button:focus-visible {
     color: #747bff;
   }
 
-  button {}
+  button {
+  }
 }
 
 .banner__sliders__product {
   display: grid;
-  max-height: 450px;
+  max-height: 900px;
   width: 100vw;
   max-width: 1920px;
   justify-content: center;
-  /* padding: 20px 0; */
+  padding-bottom: 100px;
 }
 
 .content {
   display: flex;
   max-width: 1920px;
-  width: 90vw;
+  /* width: 90vw; */
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
 }
