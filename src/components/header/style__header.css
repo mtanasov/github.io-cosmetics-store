@@ -7,11 +7,12 @@
   align-items: center;
   box-sizing: border-box;
   position: fixed;
+  padding: 0 40px;
   z-index: 99;
   transition: all 0.5s ease-in-out;
 }
 
-.header:hover .icon-btn_header {
+.header:hover .basket {
   animation: 7s basket ease-in infinite;
   /* transition: all 0.5s ease-in; */
 }
@@ -34,9 +35,7 @@
 }
 
 .nav {
-  max-width: 800px;
-  width: 40vw;
-  padding-left: 30px;
+  /* padding-left: 30px; */
   font-weight: 400;
 }
 
@@ -51,7 +50,6 @@
 .menu__bottom {}
 
 .logo {
-  max-width: 220px;
   width: 188px;
   height: 51px;
   background-image: url(https://static.insales-cdn.com/files/1/3337/22768905/original/newlogo.png);
@@ -61,8 +59,7 @@
 
 .controls {
   display: flex;
-  width: 40vw;
-  height: 30px;
+  height: 100%;
   justify-content: flex-end;
   align-items: center;
   border: 1px solid transparent;
@@ -84,6 +81,10 @@
   height: 100%;
 }
 
+.search:focus-visible {
+  outline: none;
+}
+
 .controls::before {
   content: "";
   display: inline;
@@ -96,18 +97,20 @@
   background-position: 7px;
 }
 
+.user {
+  background-image: url(../../assets/img/icon-avatar.png); 
+}
 
 .basket {
-  background-image: url(../../assets/img/basket.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  transition: translateX(0px);
+  background-image: url(../../assets/img/basket.png); 
 }
 
 .icon-btn_header {
   width: 25px;
   height: 25px;
   margin: 0 0 0 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 

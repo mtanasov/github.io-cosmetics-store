@@ -15,7 +15,7 @@
 
 .banner-list {
   display: grid;
-  grid-template-columns: repeat(4, calc(80vw / 4));
+  grid-template-columns: repeat(4, calc(70vw / 4));
   /* width: 90%;
   height: 90%;
   background-color: antiquewhite; */
