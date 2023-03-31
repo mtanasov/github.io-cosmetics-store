@@ -34,9 +34,9 @@
 }
 
 .wrapper_slider_products .swiper .swiper-wrapper .swiper-slide .photo {
-  /* width: 295px; */
+  background-position: center;
   width: auto;
-  height: 295px;
+  height: 30vh;
 }
 
 .wrapper_slider_products .swiper .swiper-wrapper .swiper-slide h3 {
