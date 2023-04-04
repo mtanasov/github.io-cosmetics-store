@@ -35,7 +35,8 @@ body {
 #root {
   display: flex;
   width: 100vw;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {

@@ -37,12 +37,7 @@ export default ({ title, arrayProduct }) => {
             }
           }
         }
-        navigation={
-          {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }
-        }
+        navigation
       >
         {
           arrayProduct.map((item) => {
@@ -50,7 +45,7 @@ export default ({ title, arrayProduct }) => {
               <>
                 <SwiperSlide>
                   <div className='photo' key={item.id}
-                    style={{ backgroundImage: `url(${item.img})` }}
+                    style={{ backgroundImage: `url(${item.img})`}}
                   >
                   </div>
                   <h3> {item.name}</h3>

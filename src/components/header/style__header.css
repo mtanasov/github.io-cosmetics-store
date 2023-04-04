@@ -39,20 +39,25 @@
   font-weight: 400;
 }
 
-.catalogue {}
+.catalogue {
+}
 
-.menu {}
+.menu {
+}
 
-.menu__catalogue {}
+.menu__catalogue {
+}
 
-.menu__top {}
+.menu__top {
+}
 
-.menu__bottom {}
+.menu__bottom {
+}
 
 .logo {
   width: 188px;
   height: 51px;
-  background-image: url(https://static.insales-cdn.com/files/1/3337/22768905/original/newlogo.png);
+  background-image: url(../../assets/img/logoMoon.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -64,8 +69,6 @@
   align-items: center;
   border: 1px solid transparent;
 }
-
-
 
 .controls input {
   width: 240px;
@@ -98,11 +101,11 @@
 }
 
 .user {
-  background-image: url(../../assets/img/icon-avatar.png); 
+  background-image: url(../../assets/img/icon-avatar.png);
 }
 
 .basket {
-  background-image: url(../../assets/img/basket.png); 
+  background-image: url(../../assets/img/basket.png);
 }
 
 .icon-btn_header {
@@ -112,8 +115,6 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
-
 
 button {
   background-color: transparent;

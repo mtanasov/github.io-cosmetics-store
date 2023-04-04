@@ -5,6 +5,7 @@ import Slider_fullscreen from "./components/slider/Slider_fullscreen";
 import Banner_category from "./components/cart_product__mini/Banner_category";
 import Slider_products from "./components/slider_products/Slider_products";
 import Blog from "./components/blog/Blog";
+import Footer from "./components/footer/Footer";
 import { dataProduct, saleProduct } from "./data/data-product";
 
 import "./index.css";
@@ -21,5 +22,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       </div>
       <Blog />
     </div>
+    <Footer />
   </React.StrictMode>
 );

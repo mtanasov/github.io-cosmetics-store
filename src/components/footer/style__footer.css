@@ -1,0 +1,71 @@
+.footer {
+  display: flex;
+  width: 100vw;
+  height: 130px;
+  background-color: #dddddd;
+}
+
+.f_block {
+  /* width: 100%; */
+  /* height: 100%; */
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  padding-top: 30px;
+  flex-grow: 2;
+  flex: 2 1 500px;
+}
+
+.footer .address {
+  padding-bottom: 20px;
+}
+
+.footer .logo {
+  margin-top: 30px;
+}
+
+.footer .createSite {
+  font-size: 13px;
+}
+
+.social_pay {
+  padding-top: 30px;
+  flex-grow: 2;
+  flex: 2 1 500px;
+}
+
+.f_sp_block {
+  display: flex;
+  gap: 10px;
+}
+
+.social_pay .soc,
+.social_pay .card {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social_pay .telegram {
+  background-image: url(../../assets/img/brand-telegram.png);
+}
+
+.social_pay .instagram {
+  background-image: url(../../assets/img/brand-instagram.png);
+}
+
+.f_sp_block .card {
+}
+.f_sp_block .visa {
+  background-image: url(../../assets/img/brand-visa.png);
+}
+.f_sp_block .mastercard {
+  background-image: url(../../assets/img/mastercard.jpg);
+}
