@@ -13,6 +13,7 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Header />
+
     <div className="content">
       <Slider_fullscreen />
       <Banner_category />

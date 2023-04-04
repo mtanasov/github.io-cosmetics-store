@@ -52,6 +52,13 @@ button {
   transition: border-color 0.25s;
 }
 
+* ul,
+* li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 button:hover {
 }
 
