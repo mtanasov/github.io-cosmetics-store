@@ -159,38 +159,44 @@ export const saleProduct = [
 ];
 
 export const items_topMenu = [
-  { title: "Каталог", imgLink: "" },
-  { title: "Блог", imgLink: "" },
-  { title: "Доставка", imgLink: "" },
-  { title: "Личный кабинет", imgLink: "" },
-  { title: "О компании", imgLink: "" },
-  { title: "Контакты", imgLink: "" },
-  { title: "Оплата", imgLink: "" },
+  { title: "Блог", imgLink: "", path: "" },
+  { title: "Доставка", imgLink: "", path: "" },
+  { title: "Личный кабинет", imgLink: "", path: "" },
+  { title: "О компании", imgLink: "", path: "" },
+  { title: "Контакты", imgLink: "", path: "" },
+  { title: "Оплата", imgLink: "", path: "" },
 ];
 
 export const items_bottomMenu = [
   {
     title: "Политика конфиденциальности и оферта",
     imgLink: "",
+    path: "",
+    element: "",
   },
   {
     title: "Условия обмена и возврата",
     imgLink: "",
+    path: "",
   },
   {
     title: "Оплата",
     imgLink: "",
+    path: "",
   },
   {
     title: " Пользовательское соглашение",
     imgLink: "",
+    path: "",
   },
   {
     title: "Доставка",
     imgLink: "",
+    path: "",
   },
   {
     title: "Контакты",
     imgLink: "",
+    path: "",
   },
 ];

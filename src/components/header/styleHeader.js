@@ -62,8 +62,6 @@ export const style = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    // paddingBottom: "10px",
-    // width: "240px",
   },
   a: {
     padding: "8px",
