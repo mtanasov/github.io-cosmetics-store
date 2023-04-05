@@ -1,5 +1,9 @@
 export const arrLinksImage = [
   {
+    link: "https://wallpaperaccess.com/full/1190736.jpg",
+    id: "3",
+  },
+  {
     link: "https://rare-gallery.com/uploads/posts/340235-Beautiful-Miranda-Kerr-Australian-Model-Celebrity-Girls-Women.jpg",
     id: "6",
   },
@@ -8,13 +12,11 @@ export const arrLinksImage = [
     id: "1",
   },
   {
-    link: "https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/04/makeup_composition_overhead-1296x728-header.jpg?w=1155&h=1528",
-    id: "3",
-  },
-  {
-    link: "https://media.glamour.com/photos/61953b4e2312a42f2b703955/2:1/w_3500,h_1750,c_limit/sisley-black-rose-face-mask-lead.jpg",
+    link: "https://wpassets.brainstation.io/app/uploads/2020/11/13094907/estee-lauder-digital.jpg",
     id: "4",
   },
-
-
-]
+  {
+    link: "https://images.pexels.com/photos/2537930/pexels-photo-2537930.jpeg?cs=srgb&dl=pexels-suzy-hazelwood-2537930.jpg&fm=jpg",
+    id: "4",
+  },
+];

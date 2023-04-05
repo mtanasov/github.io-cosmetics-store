@@ -1,32 +1,20 @@
 import { Link } from "react-router-dom";
 import { style } from "/src/components/header/styleHeader";
-import { categoryDATA } from "../../data/data-product";
 import { useState } from "react";
 
-export default (props: { state: boolean }) => {
-  const [stateOpen2, setStateOpen2] = useState(props.state);
+export default (props: { array: []; state: boolean; block: string }) => {
+  console.log("TOP___MENU", props.array);
   return (
-    <div
-      style={style.style_headerOpen(stateOpen2)}
-      // onMouseEnter={() => setStateOpen2(true)}
-      onMouseLeave={() => setStateOpen2(false)}
-    >
+    <div style={style.style_headerOpen(props.state, props.block)}>
       <ul style={style.ul}>
-        <li style={style.li}>
-          <a style={style.a_All}>
-            Смотреть всё
-            <b style={{ paddingLeft: "10px" }}>&#8250;</b>
-          </a>
-        </li>
-        {categoryDATA.map((item: { title: ""; imgLink: "" }) => {
+        {props.array.map((item: { title: ""; imgLink: "" }) => {
           return (
             <li style={style.li}>
               <a style={style.a}>{item.title}</a>
               <img
+                style={style.style_img(props.block)}
                 src={item.imgLink}
                 alt="oops..."
-                width="240px"
-                height="323px"
               />
             </li>
           );

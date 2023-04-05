@@ -157,3 +157,40 @@ export const saleProduct = [
     img: "https://static.insales-cdn.com/r/ojibeQROyqk/rs:fit:1000:1000:1/plain/images/products/1/2013/569591773/Frame_791.jpg@webp",
   },
 ];
+
+export const items_topMenu = [
+  { title: "Каталог", imgLink: "" },
+  { title: "Блог", imgLink: "" },
+  { title: "Доставка", imgLink: "" },
+  { title: "Личный кабинет", imgLink: "" },
+  { title: "О компании", imgLink: "" },
+  { title: "Контакты", imgLink: "" },
+  { title: "Оплата", imgLink: "" },
+];
+
+export const items_bottomMenu = [
+  {
+    title: "Политика конфиденциальности и оферта",
+    imgLink: "",
+  },
+  {
+    title: "Условия обмена и возврата",
+    imgLink: "",
+  },
+  {
+    title: "Оплата",
+    imgLink: "",
+  },
+  {
+    title: " Пользовательское соглашение",
+    imgLink: "",
+  },
+  {
+    title: "Доставка",
+    imgLink: "",
+  },
+  {
+    title: "Контакты",
+    imgLink: "",
+  },
+];
