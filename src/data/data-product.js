@@ -1,42 +1,100 @@
+import { v4 as uuidv4 } from "uuid";
+
+const idProduct = () => uuidv4();
+
 export const dataProduct = [
   {
-    id: "123",
+    id: idProduct(),
+    name: "Versace 'EAU FRANCHE'",
+    category: "Парфюм",
+    description:
+      "Туалетная вода Арбузная свежесть - это аромат для мужчин и женщин, он принадлежит к группе древесные пряные.  Верхние ноты: Грейпфрут и Черный перец; средние ноты: Арбуз, Лист черной смородины и Атласский кедр; базовые ноты: Ладан, Кожа, Дубовый мох и Сандал.",
+    price: "1200 uah",
+    img: "https://www.letu.ru/common/img/products/8018365500037_2.jpg",
+  },
+  {
+    id: idProduct(),
     name: "Туалетная вода 'Ягодный взрыв' ",
     category: "Парфюм",
     description:
       "Туалетная вода Арбузная свежесть - это аромат для мужчин и женщин, он принадлежит к группе древесные пряные.  Верхние ноты: Грейпфрут и Черный перец; средние ноты: Арбуз, Лист черной смородины и Атласский кедр; базовые ноты: Ладан, Кожа, Дубовый мох и Сандал.",
     price: "1200 uah",
-    img: "https://static.insales-cdn.com/r/BwyIFRTCS_A/rs:fit:1000:1000:1/plain/images/products/1/152/569589912/Frame_797.jpg@webp",
+    img: "https://www.letu.ru/common/img/uploaded/productImageFolder/DGB304945LG.jpg",
   },
   {
-    id: "102",
+    id: idProduct(),
     name: "Туалетная вода 'Арбузная свежесть' ",
     category: "Парфюм",
     description:
       "Туалетная вода женская Жасмин. Композиция создаёт романтичный образ современной женщины.Семейство ароматов: цветочные.Начальная нота: грейпфрут, бергамот, ирис. Нота “сердца”: жасмин, роза, ландыш.Конечная нота: кедр, амбра, санталовое дерево. Аромат открывается завораживающими нотками грейпфрута, бергамота и ириса, настраивая на романтичный лад.",
     price: "1250 uah",
-    img: "https://static.insales-cdn.com/r/EIt4pgYK47k/rs:fit:1000:1000:1/plain/images/products/1/198/569589958/Frame_795.jpg@webp",
+    img: "https://i.pinimg.com/originals/fc/fd/03/fcfd0300180bfe0b966c928e36f2102c.jpg",
   },
   {
-    id: "193",
+    id: idProduct(),
     name: "Туалетная вода 'Жасмин' ",
     category: "Парфюм",
     description:
       "Роматическая симфония парфюма начинается с нежного освежающего цитрусового аромата сладкого клементина и солнечного апельсина. Сладкая пряность манго медленно растворяется в прохладном цитрусовом аккорде, придавая ему особую яркость и глубину звучания. Сердце композиции дарит чарующую смесь пьянящего терпковато-медового жасмина, пряного гелиотропа и бархатистой розы. ",
     price: "2400 uah",
-    img: "https://static.insales-cdn.com/r/1rJ1jspvrLc/rs:fit:1000:1000:1/plain/images/products/1/291/569590051/Frame_798.jpg@webp",
+    img: "https://www.letu.ru/common/img/uploaded/skuImageFolder/YSL696000_mainGT.jpg",
   },
   {
-    id: "203",
+    id: idProduct(),
     name: "Туалетная вода 'Цитрусовый лес'",
     category: "Парфюм",
     description:
       "Парфюм Цитрусовый лес давно полюбился многим мужчинам за свой освежающий, искрящийся дымными фруктами неповторимый букет.Композиция открывается ярким аккордом терпких нот цитрусов и черной смородины. Колючая прохлада постепенно сменяется нежным цветочным аккордом, но фруктовые ноты продолжают играть и переливаться еще долгое время.",
     price: "1200 uah",
-    img: "https://static.insales-cdn.com/r/EIt4pgYK47k/rs:fit:1000:1000:1/plain/images/products/1/198/569589958/Frame_795.jpg@webp",
+    img: "https://www.letu.ru/common/img/uploaded/skuImageFolder/DG1137350GT.jpg",
   },
   {
-    id: "211",
+    id: idProduct(),
+    name: "Versace 'EAU FRANCHE'",
+    category: "Парфюм",
+    description:
+      "Туалетная вода Арбузная свежесть - это аромат для мужчин и женщин, он принадлежит к группе древесные пряные.  Верхние ноты: Грейпфрут и Черный перец; средние ноты: Арбуз, Лист черной смородины и Атласский кедр; базовые ноты: Ладан, Кожа, Дубовый мох и Сандал.",
+    price: "1200 uah",
+    img: "https://www.letu.ru/common/img/products/8018365500037_2.jpg",
+  },
+  {
+    id: idProduct(),
+    name: "Туалетная вода 'Ягодный взрыв' ",
+    category: "Парфюм",
+    description:
+      "Туалетная вода Арбузная свежесть - это аромат для мужчин и женщин, он принадлежит к группе древесные пряные.  Верхние ноты: Грейпфрут и Черный перец; средние ноты: Арбуз, Лист черной смородины и Атласский кедр; базовые ноты: Ладан, Кожа, Дубовый мох и Сандал.",
+    price: "1200 uah",
+    img: "https://www.letu.ru/common/img/uploaded/productImageFolder/DGB304945LG.jpg",
+  },
+  {
+    id: idProduct(),
+    name: "Туалетная вода 'Арбузная свежесть' ",
+    category: "Парфюм",
+    description:
+      "Туалетная вода женская Жасмин. Композиция создаёт романтичный образ современной женщины.Семейство ароматов: цветочные.Начальная нота: грейпфрут, бергамот, ирис. Нота “сердца”: жасмин, роза, ландыш.Конечная нота: кедр, амбра, санталовое дерево. Аромат открывается завораживающими нотками грейпфрута, бергамота и ириса, настраивая на романтичный лад.",
+    price: "1250 uah",
+    img: "https://i.pinimg.com/originals/fc/fd/03/fcfd0300180bfe0b966c928e36f2102c.jpg",
+  },
+  {
+    id: idProduct(),
+    name: "Туалетная вода 'Жасмин' ",
+    category: "Парфюм",
+    description:
+      "Роматическая симфония парфюма начинается с нежного освежающего цитрусового аромата сладкого клементина и солнечного апельсина. Сладкая пряность манго медленно растворяется в прохладном цитрусовом аккорде, придавая ему особую яркость и глубину звучания. Сердце композиции дарит чарующую смесь пьянящего терпковато-медового жасмина, пряного гелиотропа и бархатистой розы. ",
+    price: "2400 uah",
+    img: "https://www.letu.ru/common/img/uploaded/skuImageFolder/YSL696000_mainGT.jpg",
+  },
+  {
+    id: idProduct(),
+    name: "Туалетная вода 'Цитрусовый лес'",
+    category: "Парфюм",
+    description:
+      "Парфюм Цитрусовый лес давно полюбился многим мужчинам за свой освежающий, искрящийся дымными фруктами неповторимый букет.Композиция открывается ярким аккордом терпких нот цитрусов и черной смородины. Колючая прохлада постепенно сменяется нежным цветочным аккордом, но фруктовые ноты продолжают играть и переливаться еще долгое время.",
+    price: "1200 uah",
+    img: "https://www.letu.ru/common/img/uploaded/skuImageFolder/DG1137350GT.jpg",
+  },
+  {
+    id: idProduct(),
     name: "Эликсир-стайлинг для укладки волос",
     category: "Волосы",
     description:
@@ -45,7 +103,7 @@ export const dataProduct = [
     img: "https://static.insales-cdn.com/r/SS6iZRE1l_M/rs:fit:1000:1000:1/plain/images/products/1/968/569590728/Frame_785.jpg@webp",
   },
   {
-    id: "210",
+    id: idProduct(),
     name: "Шампунь для окрашенных волос",
     category: "Волосы",
     description:
@@ -54,7 +112,7 @@ export const dataProduct = [
     img: "https://static.insales-cdn.com/r/BHIObemKUf4/rs:fit:1000:1000:1/plain/images/products/1/1012/569590772/Frame_789.jpg@webp",
   },
   {
-    id: "110",
+    id: idProduct(),
     name: "Укрепляющий бальзам-ополаскиватель",
     category: "Волосы",
     description:
@@ -63,7 +121,7 @@ export const dataProduct = [
     img: "https://static.insales-cdn.com/r/EFZCIXSAXhE/rs:fit:1000:1000:1/plain/images/products/1/1183/569590943/Frame_788.jpg@webp",
   },
   {
-    id: "100",
+    id: idProduct(),
     name: "Палетка теней для век",
     category: "Декоративная косметика",
     description:
@@ -72,7 +130,7 @@ export const dataProduct = [
     img: "https://static.insales-cdn.com/r/lNZ2cC_dIBI/rs:fit:1000:1000:1/plain/images/products/1/6959/569588527/Frame_808.jpg@webp",
   },
   {
-    id: "160",
+    id: idProduct(),
     name: "Очищающий гель для умывания",
     category: "Уход",
     description:
@@ -86,18 +144,22 @@ export const categoryDATA = [
   {
     title: "Парфюм",
     imgLink: "src/assets/img/imgParfums.jpg",
+    URL_category: "/parfums",
   },
   {
     title: "Волосы",
     imgLink: "src/assets/img/imgHair.jpg",
+    URL_category: "/hair",
   },
   {
     title: "Декоративная косметика",
     imgLink: "src/assets/img/imgDecorativeCosmetics.jpg",
+    URL_category: "/cosmetics",
   },
   {
     title: "Уход",
     imgLink: "src/assets/img/imgCare.jpg",
+    URL_category: "/care",
   },
 ];
 

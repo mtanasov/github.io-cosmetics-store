@@ -3,8 +3,6 @@ import { arrayOfArticles } from "../../data/data-blog";
 import Blog_item from "./Blog_item";
 import "./style_blog.css";
 
-console.log(arrayOfArticles);
-
 export default () => {
   interface blogInterface {
     id?: string;
