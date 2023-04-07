@@ -93,8 +93,8 @@ button:focus-visible {
 
 .content {
   display: flex;
-  max-width: 1920px;
-  /* width: 90vw; */
+  /* max-width: 1920px; */
+  width: 100vw;
   flex-direction: column;
   align-items: center;
 }

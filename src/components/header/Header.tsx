@@ -7,12 +7,15 @@ import {
 } from "../../data/data-product";
 import "./style__header.css";
 import PopUp_header from "./PopUp_header";
+import Counter from "../counter/Counter";
+import { getLocalStorage } from "../../data/getDataLocalStor";
 
 export default memo(() => {
   const [trigger, setTrigger] = useState(false);
   const [isOpenCatalogue, setIsOpenCatalogue] = useState(false);
   const [isOpenTopMenu, setIsOpenTopMenu] = useState(false);
   const [isOpenBottomMenu, setIsOpenBottomMenu] = useState(false);
+
   const scroll_Y: number = 30;
   const id_btn_catalogue = "btn_catalogue";
   const id_btn_topMenu = "btn_topMenu";
@@ -28,6 +31,9 @@ export default memo(() => {
       }
     });
   });
+
+  const arrBuyProductOnBasket = getLocalStorage("buy");
+  const arrFavoriteProduct = getLocalStorage("favorite");
 
   return (
     <>
@@ -92,10 +98,34 @@ export default memo(() => {
             }}
           ></Link>
         </div>
+
         <div className="controls">
           <input className="search" type="text" placeholder="Поиск" />
           <button className="user icon-btn_header"></button>
-          <button className="basket icon-btn_header"></button>
+          <button className="basket icon-btn_header">
+            <Counter
+              count={
+                arrBuyProductOnBasket
+                  ? Array.isArray(arrBuyProductOnBasket) &&
+                    arrBuyProductOnBasket.length
+                  : Number(0)
+              }
+              state={true}
+              context={"basket"}
+            />
+          </button>
+          <button className="favorite icon-btn_header">
+            <Counter
+              count={
+                arrFavoriteProduct
+                  ? Array.isArray(arrFavoriteProduct) &&
+                    arrFavoriteProduct.length
+                  : Number(0)
+              }
+              state={true}
+              context={"favorite"}
+            />
+          </button>
         </div>
         <div style={{ padding: "0", margin: "0" }}>
           <div style={{ padding: "0", margin: "0" }}>

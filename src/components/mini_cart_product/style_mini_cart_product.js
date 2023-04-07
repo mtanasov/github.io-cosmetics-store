@@ -6,15 +6,18 @@ export const style = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    paddingBottom: "30px",
   },
   image: {
     width: "280px",
     height: "280px",
+    border: "1px solid",
   },
   productName: {
     textAlign: "center",
-    width: "300px",
+    width: "280px",
     height: "40px",
+    fontSize: "16px",
   },
   noName: {
     width: "100%",
@@ -29,13 +32,13 @@ export const style = {
     paddingLeft: "20px",
   },
   buyProduct: {
-    height: "25px",
-    width: "25px",
+    height: "35px",
+    width: "35px",
     backgroundImage: "url(src/assets/img/shopping-bag.png)",
     backgroundSize: "30px",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
-    // backgroundColor: "rgb(139, 224, 148)",
+    backgroundColor: " rgb(119 242 140)",
     padding: "6px",
     borderRadius: "50%",
     marginLeft: "25px",
@@ -43,8 +46,8 @@ export const style = {
   },
   favorite: (param) => {
     return {
-      height: "25px",
-      width: "25px",
+      height: "35px",
+      width: "35px",
       backgroundImage: "url(src/assets/img/star.png)",
       backgroundSize: "25px",
       backgroundRepeat: "no-repeat",
@@ -52,7 +55,8 @@ export const style = {
       padding: "6px",
       borderRadius: "50%",
       border: "2px solid",
-      backgroundColor: param ? "rgb(254 255 118)" : "transparent",
+      // backgroundColor: param ? "rgb(242 242 119)" : "transparent",
+      // backgroundColor: "rgb(242 242 119)",
     };
   },
 };

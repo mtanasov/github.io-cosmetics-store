@@ -1,16 +1,31 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Breadcrumbs, Anchor } from "@mantine/core";
+import { categoryDATA } from "../../data/data-product";
 import Mini_cart_product from "../mini_cart_product/Mini_cart_product";
 import { style } from "./style_categoryProduct.js";
 
 export default (props: { arrProduct: []; category: any }) => {
   const [arrCategory, setArrCategory] = useState(props.arrProduct);
-  const [favoriteState, setFavoriteState] = useState(false);
+
+  const items = [
+    { title: "Главная", href: "/" },
+    { title: props.category, href: "/parfums" },
+  ].map((item, index) => (
+    <Anchor href={item.href} key={index}>
+      {item.title}
+    </Anchor>
+  ));
 
   return (
     <div style={style.conteiner}>
-      <h2 style={style.title}>{props.category}</h2>
+      <>
+        <Breadcrumbs separator="→" mt="xs" style={{ width: "90vw" }}>
+          {items}
+        </Breadcrumbs>
+      </>
+      <h1 style={style.title}>{props.category}</h1>
       <div style={style.listProduct}>
         {arrCategory
           .filter((product: { category: "" }): any => {

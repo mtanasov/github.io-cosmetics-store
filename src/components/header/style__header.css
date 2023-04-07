@@ -13,7 +13,7 @@
 }
 
 .header:hover .basket {
-  animation: 7s basket ease-in infinite;
+  /* animation: 7s basket ease-in infinite; */
   /* transition: all 0.5s ease-in; */
 }
 
@@ -101,16 +101,21 @@
 }
 
 .user {
-  background-image: url(../../assets/img/icon-avatar.png);
+  background-image: url(../../assets/img/user.png);
 }
 
 .basket {
-  background-image: url(../../assets/img/basket.png);
+  background-image: url(../../assets/img/shopping-bag.png);
+}
+
+.favorite {
+  /* animation: 10s basket ease-in-out infinite; */
+  background-image: url(../../assets/img/star.png);
 }
 
 .icon-btn_header {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   margin: 0 0 0 10px;
   background-repeat: no-repeat;
   background-size: 100% 100%;

@@ -12,16 +12,14 @@ import "./index.css";
 
 export default () => {
   return (
-    <>
-      <div className="content">
-        <Slider_fullscreen />
-        <Banner_category />
-        <div className="banner__sliders__product">
-          <Slider_products arrayProduct={dataProduct} title={"Бестселлеры"} />
-          <Slider_products arrayProduct={saleProduct} title={"Скидки"} />
-        </div>
-        <Blog />
+    <div className="content">
+      <Slider_fullscreen />
+      <Banner_category />
+      <div className="banner__sliders__product">
+        <Slider_products arrayProduct={dataProduct} title={"Бестселлеры"} />
+        <Slider_products arrayProduct={saleProduct} title={"Скидки"} />
       </div>
-    </>
+      <Blog />
+    </div>
   );
 };
