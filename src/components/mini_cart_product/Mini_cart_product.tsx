@@ -11,51 +11,63 @@ interface product {
   name: "";
   price: "";
   state?: boolean;
+  URL_link: "";
 }
 
 export default (product: product) => {
   const keyLocalStorage_Favorite = "favorite";
   const keyLocalStorage_Buy = "buy";
-  const [state, setState] = useState(false);
-  const [favoriteState, setFavoriteState] = useState(false);
+  const [isBuyProduct, setIsBuyProduct] = useState<Boolean>();
+  const [isFavoriteProduct, setIsFavoriteProduct] = useState<Boolean>();
   const [arrFavoriteProd, setArrFavoriteProd] = useLocalStorage<Array<Object>>({
     key: keyLocalStorage_Favorite,
-    defaultValue: [],
+    defaultValue: getLocalStorage(keyLocalStorage_Favorite) || [],
   });
   const [arrBuyProd, setArrBuyProd] = useLocalStorage<Array<Object>>({
     key: keyLocalStorage_Buy,
     defaultValue: getLocalStorage(keyLocalStorage_Buy) || [],
   });
-  // TODO написать функцию , которая проверяет наличие товара в массиве и возвращает bool, на основе этого сделать подстветку кнопок купить и нравится
+
+  const isInArray = (array: any): any => {
+    return array.map((item: any) => item.id).includes(product.id);
+  };
+
+  useEffect(() => {
+    setIsBuyProduct(isInArray(arrBuyProd));
+    setIsFavoriteProduct(isInArray(arrFavoriteProd));
+  });
 
   return (
     <div style={style.blockProduct}>
-      <img style={style.image} src={product.img} alt="Oops..." />
-      <h3 style={style.productName}>{product.name}</h3>
+      <Link to={`/parfums/product`}>
+        <img style={style.image} src={product.img} alt="Oops..." />
+        <h3 style={style.productName}>{product.name}</h3>
+      </Link>
       <div style={style.noName}>
         <div style={style.productPrice}>{product.price}</div>
+        {/* todo BUY */}
         <button
-          style={style.buyProduct}
+          style={style.buyProduct(isBuyProduct)}
           onClick={() => {
             if (arrBuyProd === null) {
-              setState(!state);
-              return setArrBuyProd([
+              setIsBuyProduct(!isBuyProduct);
+              setArrBuyProd([
                 {
                   id: product.id,
                   price: product.price,
                   quantity: 1,
                 },
               ]);
-            } else if (arrBuyProd.map((item) => item.id).includes(product.id)) {
-              console.log("product DELETE  local storage");
-              setState(!state);
-              return setArrBuyProd(
-                arrBuyProd.filter((item: { id: "" }) => item.id !== product.id)
+            } else if (
+              arrBuyProd.map((item: any) => item.id).includes(product.id)
+            ) {
+              setIsBuyProduct(!isBuyProduct);
+              setArrBuyProd(
+                arrBuyProd.filter((item: any) => item.id !== product.id) // any
               );
             } else {
-              console.log("product ADD  local storage");
-              setState(!state);
-              return setArrBuyProd(
+              setIsBuyProduct(!isBuyProduct);
+              setArrBuyProd(
                 arrBuyProd.concat({
                   id: product.id,
                   price: product.price,
@@ -65,13 +77,13 @@ export default (product: product) => {
             }
           }}
         ></button>
+        {/* todo FAVORITE */}
         <button
-          // onClick={() => setFavoriteState(!favoriteState)}
-          style={style.favorite(favoriteState)}
+          style={style.favorite(isFavoriteProduct)}
           onClick={() => {
             if (arrFavoriteProd === null) {
-              setState(!state);
-              return setArrFavoriteProd([
+              setIsFavoriteProduct(!isFavoriteProduct);
+              setArrFavoriteProd([
                 {
                   id: product.id,
                   price: product.price,
@@ -79,19 +91,15 @@ export default (product: product) => {
                 },
               ]);
             } else if (
-              arrFavoriteProd.map((item) => item.id).includes(product.id)
+              arrFavoriteProd.map((item: any) => item.id).includes(product.id)
             ) {
-              console.log("product DELETE  local storage");
-              setState(!state);
-              return setArrFavoriteProd(
-                arrFavoriteProd.filter(
-                  (item: { id: "" }) => item.id !== product.id
-                )
+              setIsFavoriteProduct(!isFavoriteProduct);
+              setArrFavoriteProd(
+                arrFavoriteProd.filter((item: any) => item.id !== product.id)
               );
             } else {
-              console.log("product ADD  local storage");
-              setState(!state);
-              return setArrFavoriteProd(
+              setIsFavoriteProduct(!isFavoriteProduct);
+              setArrFavoriteProd(
                 arrFavoriteProd.concat({
                   id: product.id,
                   price: product.price,

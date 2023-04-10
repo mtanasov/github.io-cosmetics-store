@@ -15,6 +15,7 @@ export default memo(() => {
   const [isOpenCatalogue, setIsOpenCatalogue] = useState(false);
   const [isOpenTopMenu, setIsOpenTopMenu] = useState(false);
   const [isOpenBottomMenu, setIsOpenBottomMenu] = useState(false);
+  const [state, setState] = useState(false);
 
   const scroll_Y: number = 30;
   const id_btn_catalogue = "btn_catalogue";
@@ -30,6 +31,7 @@ export default memo(() => {
         isOpenCatalogue ? setIsOpenCatalogue(true) : setIsOpenCatalogue(false);
       }
     });
+    document.onclick = () => setState(!state);
   });
 
   const arrBuyProductOnBasket = getLocalStorage("buy");

@@ -31,18 +31,21 @@ export const style = {
     fontFamily: "monospace",
     paddingLeft: "20px",
   },
-  buyProduct: {
-    height: "35px",
-    width: "35px",
-    backgroundImage: "url(src/assets/img/shopping-bag.png)",
-    backgroundSize: "30px",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center",
-    backgroundColor: " rgb(119 242 140)",
-    padding: "6px",
-    borderRadius: "50%",
-    marginLeft: "25px",
-    border: "2px solid",
+  buyProduct: (param) => {
+    return {
+      height: "35px",
+      width: "35px",
+      backgroundImage: "url(src/assets/img/shopping-bag.png)",
+      backgroundSize: "30px",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center center",
+      backgroundColor: " rgb(119 242 140)",
+      backgroundColor: param ? "rgb(119 242 140)" : "transparent",
+      padding: "6px",
+      borderRadius: "50%",
+      marginLeft: "25px",
+      border: "2px solid",
+    };
   },
   favorite: (param) => {
     return {
@@ -55,7 +58,7 @@ export const style = {
       padding: "6px",
       borderRadius: "50%",
       border: "2px solid",
-      // backgroundColor: param ? "rgb(242 242 119)" : "transparent",
+      backgroundColor: param ? "rgb(242 242 119)" : "transparent",
       // backgroundColor: "rgb(242 242 119)",
     };
   },

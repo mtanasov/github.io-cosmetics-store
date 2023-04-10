@@ -11,7 +11,7 @@ export default (props: { arrProduct: []; category: any }) => {
 
   const items = [
     { title: "Главная", href: "/" },
-    { title: props.category, href: "/parfums" },
+    { title: props.category, href: "" },
   ].map((item, index) => (
     <Anchor href={item.href} key={index}>
       {item.title}
@@ -31,22 +31,17 @@ export default (props: { arrProduct: []; category: any }) => {
           .filter((product: { category: "" }): any => {
             return product.category === props.category;
           })
-          .map(
-            (
-              product: { id: ""; name: ""; price: ""; img: "" },
-              index: number
-            ): any => {
-              return (
-                <Mini_cart_product
-                  key={product.id.toString()}
-                  id={product.id}
-                  img={product.img}
-                  name={product.name}
-                  price={product.price}
-                />
-              );
-            }
-          )}
+          .map((product: { id: ""; name: ""; price: ""; img: "" }): any => {
+            return (
+              <Mini_cart_product
+                key={product.id.toString()}
+                id={product.id}
+                img={product.img}
+                name={product.name}
+                price={product.price}
+              />
+            );
+          })}
       </div>
     </div>
   );
