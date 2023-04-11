@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, Router, Route } from "react-router-dom";
 import { useLocalStorage } from "@mantine/hooks";
 import { style } from "./style_mini_cart_product.js";
 import { getLocalStorage } from "../../data/getDataLocalStor.js";
@@ -39,7 +39,7 @@ export default (product: product) => {
 
   return (
     <div style={style.blockProduct}>
-      <Link to={`/parfums/product`}>
+      <Link to={`/product/${product.URL_link}`}>
         <img style={style.image} src={product.img} alt="Oops..." />
         <h3 style={style.productName}>{product.name}</h3>
       </Link>

@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   LoaderFunctionArgs,
+  useParams,
 } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import CategoryProduct_page from "./components/catalogue/CategoryProduct_page";
@@ -26,7 +27,7 @@ export const App = () => {
             <CategoryProduct_page arrProduct={dataProduct} category="Парфюм" />
           }
         ></Route>
-        <Route path="/parfums/product" element={<Cart_product />} />
+        <Route path="/product/:atr" element={<Cart_product />} />
 
         <Route
           path="/hair"

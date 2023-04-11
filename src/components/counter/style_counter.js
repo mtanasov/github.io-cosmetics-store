@@ -4,7 +4,7 @@ export const style = {
       return {
         width: "28px",
         backgroundColor: "rgb(119 242 140)",
-        height: "18px",
+        height: "16px",
         borderRadius: "30%",
         marginTop: "15px",
         marginLeft: "5px",

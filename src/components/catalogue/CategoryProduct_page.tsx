@@ -31,17 +31,26 @@ export default (props: { arrProduct: []; category: any }) => {
           .filter((product: { category: "" }): any => {
             return product.category === props.category;
           })
-          .map((product: { id: ""; name: ""; price: ""; img: "" }): any => {
-            return (
-              <Mini_cart_product
-                key={product.id.toString()}
-                id={product.id}
-                img={product.img}
-                name={product.name}
-                price={product.price}
-              />
-            );
-          })}
+          .map(
+            (product: {
+              id: "";
+              name: "";
+              price: "";
+              img: "";
+              URL_link: "";
+            }): any => {
+              return (
+                <Mini_cart_product
+                  key={product.id.toString()}
+                  id={product.id}
+                  img={product.img}
+                  name={product.name}
+                  price={product.price}
+                  URL_link={product.URL_link}
+                />
+              );
+            }
+          )}
       </div>
     </div>
   );
