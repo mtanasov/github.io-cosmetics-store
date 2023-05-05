@@ -1,7 +1,7 @@
 export const style = {
   conteiner: {
     display: "flex",
-    paddingTop: "7vh",
+    paddingTop: "60px",
     width: "100vw",
     // height: "107vh",
     // maxHeight: "1900px",

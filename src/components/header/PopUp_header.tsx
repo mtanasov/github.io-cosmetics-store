@@ -15,14 +15,18 @@ export default (props: { array: []; state: boolean; block: string }) => {
             ) => {
               return (
                 <li style={style.li} key={index.toString()}>
-                  <Link to={item.URL_category} style={style.a}>
+                  <Link
+                    to={item.URL_category}
+                    style={style.a}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
                     {item.title}
+                    <img
+                      style={style.style_img(props.block)}
+                      src={item.imgLink}
+                      alt="oops..."
+                    />
                   </Link>
-                  <img
-                    style={style.style_img(props.block)}
-                    src={item.imgLink}
-                    alt="oops..."
-                  />
                 </li>
               );
             }

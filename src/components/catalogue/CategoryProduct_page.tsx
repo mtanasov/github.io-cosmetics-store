@@ -13,7 +13,7 @@ export default (props: { arrProduct: []; category: any }) => {
     { title: "Главная", href: "/" },
     { title: props.category, href: "" },
   ].map((item, index) => (
-    <Anchor href={item.href} key={index}>
+    <Anchor href={item.href} key={index.toString()}>
       {item.title}
     </Anchor>
   ));
@@ -41,7 +41,7 @@ export default (props: { arrProduct: []; category: any }) => {
             }): any => {
               return (
                 <Mini_cart_product
-                  key={product.id.toString()}
+                  key={product.id}
                   id={product.id}
                   img={product.img}
                   name={product.name}

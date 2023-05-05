@@ -22,7 +22,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  /* color: #646cff; */
   text-decoration: inherit;
 }
 
@@ -81,7 +81,7 @@ button:focus-visible {
   }
 
   a:hover {
-    color: #747bff;
+    color: #f551b3;
   }
 
   button {

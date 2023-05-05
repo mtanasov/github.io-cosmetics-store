@@ -4,6 +4,7 @@ import { Breadcrumbs, Anchor } from "@mantine/core";
 import { dataProduct, categoryDATA } from "../../data/data-product";
 import Slider_products from "../slider_products/Slider_products";
 import { style } from "./style_cartProduct";
+import ButtonBut from "../controls/ButtonBut";
 
 interface productCosmetics {
   id: "";
@@ -28,7 +29,6 @@ interface productCosmetics {
 
 export default () => {
   const { atr } = useParams();
-
   const product: productCosmetics = dataProduct.filter(
     (item: { URL_link: "" }) => item.URL_link === atr
   )[0];
@@ -43,7 +43,7 @@ export default () => {
     },
     { title: product.name, href: "" },
   ].map((item, index) => (
-    <Anchor href={item.href} key={index}>
+    <Anchor href={item.href} key={index.toString()}>
       {item.title}
     </Anchor>
   ));
@@ -57,6 +57,7 @@ export default () => {
       >
         {items}
       </Breadcrumbs>
+
       <div style={style.wrapper}>
         <div style={style.blockInfo}>
           <h1>
@@ -146,11 +147,7 @@ export default () => {
               нет в наличии{" "}
             </div>
           )}
-          {/* </div> */}
-          <div style={{ display: "flex", gap: "25px" }}>
-            <button style={style.btnBuy(product.inStock)}> </button>
-            <button style={style.btnFavorite(product.inStock)}> </button>
-          </div>
+          <ButtonBut id={product.id} />
           <div style={style.freePost}>
             <div style={style.iconPost}></div>
             Бесплатная доставка

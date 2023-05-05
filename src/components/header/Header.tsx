@@ -9,12 +9,12 @@ import "./style__header.css";
 import PopUp_header from "./PopUp_header";
 import Counter from "../counter/Counter";
 import { getLocalStorage } from "../../data/getDataLocalStor";
+import { useDisclosure } from '@mantine/hooks';
 
 export default memo(() => {
   const [trigger, setTrigger] = useState(false);
   const [isOpenCatalogue, setIsOpenCatalogue] = useState(false);
   const [isOpenTopMenu, setIsOpenTopMenu] = useState(false);
-  const [isOpenBottomMenu, setIsOpenBottomMenu] = useState(false);
   const [state, setState] = useState(false);
 
   const scroll_Y: number = 30;
@@ -47,6 +47,7 @@ export default memo(() => {
         onMouseLeave={() => {
           window.scrollY > scroll_Y ? setTrigger(true) : setTrigger(false);
           setIsOpenCatalogue(false);
+          setIsOpenTopMenu(false);
         }}
         style={{
           backgroundColor: trigger ? "rgb(255, 255, 255)" : "transparent",
@@ -59,7 +60,6 @@ export default memo(() => {
             onMouseEnter={() => {
               setIsOpenCatalogue(true);
               setIsOpenTopMenu(false);
-              setIsOpenBottomMenu(false);
             }}
             onClick={() => setIsOpenCatalogue(!isOpenCatalogue)}
           >
@@ -71,27 +71,16 @@ export default memo(() => {
             onClick={() => {
               setIsOpenCatalogue(false);
               setIsOpenTopMenu(!isOpenTopMenu);
-              setIsOpenBottomMenu(false);
             }}
             // onMouseLeave={() => setIsOpenTopMenu(false)}
           >
-            Верхнее меню
-          </button>
-          <button
-            id={id_btn_bottomMenu}
-            className="menu__bottom"
-            onClick={() => {
-              setIsOpenCatalogue(false);
-              setIsOpenTopMenu(false);
-              setIsOpenBottomMenu(!isOpenBottomMenu);
-            }}
-          >
-            Нижнее меню
+            Меню
           </button>
         </div>
 
         <div className="logo">
           <Link
+            onClick={() => window.scrollTo(0, 0)}
             to="/"
             style={{
               display: "inline-block",
@@ -104,6 +93,7 @@ export default memo(() => {
         <div className="controls">
           <input className="search" type="text" placeholder="Поиск" />
           <button className="user icon-btn_header"></button>
+         
           <button className="basket icon-btn_header">
             <Counter
               count={
@@ -129,6 +119,7 @@ export default memo(() => {
             />
           </button>
         </div>
+
         <div style={{ padding: "0", margin: "0" }}>
           <div style={{ padding: "0", margin: "0" }}>
             {trigger && isOpenCatalogue ? (
@@ -148,17 +139,8 @@ export default memo(() => {
               />
             ) : null}
           </div>
-          <div>
-            {trigger && isOpenBottomMenu ? (
-              <PopUp_header
-                state={trigger}
-                array={items_bottomMenu}
-                block={id_btn_bottomMenu}
-              />
-            ) : null}
-          </div>
         </div>
       </header>
-    </>
+         </>
   );
 });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, createContext } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -12,8 +12,10 @@ import Start_page from "./Start_page";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Cart_product from "./components/cart_product/cart_product";
+import About from "./components/topMenu/About";
 import { dataProduct } from "./data/data-product";
 import "./index.css";
+import Contacts from "./components/topMenu/Contacts";
 
 export const App = () => {
   return (
@@ -51,6 +53,8 @@ export const App = () => {
             <CategoryProduct_page arrProduct={dataProduct} category="Уход" />
           }
         />
+        <Route path="/about" element={<About />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="/*" element={<div>{"Error"}</div>} />
       </Routes>
       <Footer />

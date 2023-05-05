@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Header from "./components/header/Header";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Slider_fullscreen from "./components/slider/Slider_fullscreen";
 import Banner_category from "./components/banner/Banner_category";
 import Slider_products from "./components/slider_products/Slider_products";

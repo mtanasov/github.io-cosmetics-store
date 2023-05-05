@@ -44,7 +44,7 @@ export default () => {
       {
         arrLinksImage.map((imgLink, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index.toString()}>
               <div key={imgLink.id}
                 style={{ backgroundImage: `url(${imgLink.link})` }}
               >

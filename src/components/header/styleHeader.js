@@ -59,12 +59,16 @@ export const style = {
     padding: " 0 10px",
   },
   li: {
+    padding: "8px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    width: "16vw",
+    maxWidth: "240px",
   },
   a: {
     padding: "8px",
+    textAlign: "center",
   },
   a_All: {
     display: "block",

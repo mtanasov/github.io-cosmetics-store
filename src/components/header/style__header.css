@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 220px 1fr;
   width: 100vw;
   max-height: 72px;
-  height: 7vh;
+  height: 50px;
   align-items: center;
   box-sizing: border-box;
   position: fixed;

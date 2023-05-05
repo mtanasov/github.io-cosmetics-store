@@ -18,6 +18,7 @@ export default () => {
         if (index % 2 === 0) {
           return (
             <Blog_item
+              key={index.toString()}
               title={item.title}
               description={item.description}
               img={item.img}
@@ -26,6 +27,7 @@ export default () => {
         } else {
           return (
             <Blog_item
+              key={index.toString()}
               title={item.title}
               description={item.description}
               img={item.img}

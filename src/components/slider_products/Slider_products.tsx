@@ -1,8 +1,3 @@
-import { useState } from "react";
-import { arrLinksImage } from "../../data/img-array";
-import { dataProduct } from "../../data/data-product";
-import Mini_cart_product from "../mini_cart_product/Mini_cart_product";
-//swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { register } from "swiper/element/bundle";
 
@@ -15,13 +10,7 @@ import { Link } from "react-router-dom";
 
 register();
 
-export default (props: { title: ""; arrayProduct: [] }) => {
-  // interface cartProductOnSlide {
-  //   name: string,
-  //   price: string,
-  //   img: string,
-  //   id: string,
-  // }
+export default (props: { title: string, arrayProduct: [] }) => {
   return (
     <div className="wrapper_slider_products">
       <h2> {props.title} </h2>
@@ -39,9 +28,12 @@ export default (props: { title: ""; arrayProduct: [] }) => {
         navigation
       >
         {props.arrayProduct.map(
-          (item: { id: ""; img: ""; name: ""; price: ""; URL_link: "" }) => {
+          (
+            item: { id: ""; img: ""; name: ""; price: ""; URL_link: "" },
+            index: number
+          ) => {
             return (
-              <>
+              <div key={Math.floor(Math.random() * 100000).toString()}>
                 <SwiperSlide>
                   {/* 
                 //TODO вставить в слайдер компонент мини карты
@@ -52,10 +44,13 @@ export default (props: { title: ""; arrayProduct: [] }) => {
                   price={item.price}
                 /> */}
 
-                  <Link to={`/product/${item.URL_link}`}>
+                  <Link
+                    onClick={() => window.scrollTo(0, 0)}
+                    to={`/product/${item.URL_link}`}
+                  >
                     <div
                       className="photo"
-                      key={item.id}
+                      // key={index.toString()}
                       style={{
                         backgroundImage: `url(${item.img})`,
                         backgroundRepeat: "no-repeat",
@@ -67,7 +62,7 @@ export default (props: { title: ""; arrayProduct: [] }) => {
                     <div className="price">{item.price}</div>
                   </Link>
                 </SwiperSlide>
-              </>
+              </div>
             );
           }
         )}

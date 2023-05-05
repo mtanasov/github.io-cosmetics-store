@@ -860,22 +860,22 @@ const newAr = dataProduct.map((item) =>
 export const categoryDATA = [
   {
     title: "Парфюм",
-    imgLink: "src/assets/img/imgParfums.jpg",
+    imgLink: "/src/assets/img/imgParfums.jpg",
     URL_category: "/parfums",
   },
   {
     title: "Волосы",
-    imgLink: "src/assets/img/imgHair.jpg",
+    imgLink: "/src/assets/img/imgHair.jpg",
     URL_category: "/hair",
   },
   {
     title: "Декоративная косметика",
-    imgLink: "src/assets/img/imgDecorativeCosmetics.jpg",
+    imgLink: "/src/assets/img/imgDecorativeCosmetics.jpg",
     URL_category: "/cosmetics",
   },
   {
     title: "Уход",
-    imgLink: "src/assets/img/imgCare.jpg",
+    imgLink: "/src/assets/img/imgCare.jpg",
     URL_category: "/care",
   },
 ];
@@ -1178,12 +1178,11 @@ export const saleProduct = [
 ];
 
 export const items_topMenu = [
-  { title: "Блог", imgLink: "", path: "" },
-  { title: "Доставка", imgLink: "", path: "" },
-  { title: "Личный кабинет", imgLink: "", path: "" },
-  { title: "О компании", imgLink: "", path: "" },
-  { title: "Контакты", imgLink: "", path: "" },
-  { title: "Оплата", imgLink: "", path: "" },
+  { title: "Блог", imgLink: "", URL_category: "" },
+  { title: "Доставка", imgLink: "", URL_category: "" },
+  { title: "Оплата", imgLink: "", URL_category: "" },
+  { title: "Контакты", imgLink: "", URL_category: "/contacts" },
+  { title: "О компании", imgLink: "", URL_category: "/about" },
 ];
 
 export const items_bottomMenu = [

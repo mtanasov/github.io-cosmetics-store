@@ -4,6 +4,8 @@ import { Link, Router, Route } from "react-router-dom";
 import { useLocalStorage } from "@mantine/hooks";
 import { style } from "./style_mini_cart_product.js";
 import { getLocalStorage } from "../../data/getDataLocalStor.js";
+import ButtonBut from "../controls/ButtonBut";
+import { ListItem } from "@mantine/core/lib/List/ListItem/ListItem.js";
 
 interface product {
   id: "";
@@ -39,77 +41,15 @@ export default (product: product) => {
 
   return (
     <div style={style.blockProduct}>
-      <Link to={`/product/${product.URL_link}`}>
+      <Link
+        to={`/product/${product.URL_link}`}
+        onClick={() => window.scrollTo(0, 0)}
+      >
         <img style={style.image} src={product.img} alt="Oops..." />
         <h3 style={style.productName}>{product.name}</h3>
       </Link>
-      <div style={style.noName}>
-        <div style={style.productPrice}>{product.price}</div>
-        {/* todo BUY */}
-        <button
-          style={style.buyProduct(isBuyProduct)}
-          onClick={() => {
-            if (arrBuyProd === null) {
-              setIsBuyProduct(!isBuyProduct);
-              setArrBuyProd([
-                {
-                  id: product.id,
-                  price: product.price,
-                  quantity: 1,
-                },
-              ]);
-            } else if (
-              arrBuyProd.map((item: any) => item.id).includes(product.id)
-            ) {
-              setIsBuyProduct(!isBuyProduct);
-              setArrBuyProd(
-                arrBuyProd.filter((item: any) => item.id !== product.id) // any
-              );
-            } else {
-              setIsBuyProduct(!isBuyProduct);
-              setArrBuyProd(
-                arrBuyProd.concat({
-                  id: product.id,
-                  price: product.price,
-                  quantity: 1,
-                })
-              );
-            }
-          }}
-        ></button>
-        {/* todo FAVORITE */}
-        <button
-          style={style.favorite(isFavoriteProduct)}
-          onClick={() => {
-            if (arrFavoriteProd === null) {
-              setIsFavoriteProduct(!isFavoriteProduct);
-              setArrFavoriteProd([
-                {
-                  id: product.id,
-                  price: product.price,
-                  quantity: 1,
-                },
-              ]);
-            } else if (
-              arrFavoriteProd.map((item: any) => item.id).includes(product.id)
-            ) {
-              setIsFavoriteProduct(!isFavoriteProduct);
-              setArrFavoriteProd(
-                arrFavoriteProd.filter((item: any) => item.id !== product.id)
-              );
-            } else {
-              setIsFavoriteProduct(!isFavoriteProduct);
-              setArrFavoriteProd(
-                arrFavoriteProd.concat({
-                  id: product.id,
-                  price: product.price,
-                  quantity: 1,
-                })
-              );
-            }
-          }}
-        ></button>
-      </div>
+      <div>{product.price}</div>
+      <ButtonBut id={product.id} />
     </div>
   );
 };
