@@ -10,12 +10,14 @@ import PopUp_header from "./PopUp_header";
 import Counter from "../counter/Counter";
 import { getLocalStorage } from "../../data/getDataLocalStor";
 import { useDisclosure } from '@mantine/hooks';
+import Login from "../authentication/Login";
 
 export default memo(() => {
   const [trigger, setTrigger] = useState(false);
   const [isOpenCatalogue, setIsOpenCatalogue] = useState(false);
   const [isOpenTopMenu, setIsOpenTopMenu] = useState(false);
   const [state, setState] = useState(false);
+  const [userState, setUserState] = useState(false);
 
   const scroll_Y: number = 30;
   const id_btn_catalogue = "btn_catalogue";
@@ -92,7 +94,7 @@ export default memo(() => {
 
         <div className="controls">
           <input className="search" type="text" placeholder="Поиск" />
-          <button className="user icon-btn_header"></button>
+          <button className="user icon-btn_header" onClick={()=> setUserState(!userState)}></button>
          
           <button className="basket icon-btn_header">
             <Counter
@@ -139,6 +141,9 @@ export default memo(() => {
               />
             ) : null}
           </div>
+        </div>
+        <div onMouseLeave={() : any=> setUserState(false)}>
+         { userState && <Login />}
         </div>
       </header>
          </>

@@ -1,5 +1,4 @@
 import { Form, useParams } from "react-router-dom";
-import Header from "../header/Header";
 import { Breadcrumbs, Anchor } from "@mantine/core";
 import { dataProduct, categoryDATA } from "../../data/data-product";
 import Slider_products from "../slider_products/Slider_products";
